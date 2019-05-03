@@ -27,7 +27,7 @@ const tasks = {
     allFetchCalls.getTask()
     .then(tasks => {
 
-        const taskContainer = document.querySelector("#tasks-section");
+        taskContainer = document.querySelector("#tasks-section");
 
         tasks.forEach(task => {
          const taskSection = document.createElement("section");
@@ -37,9 +37,9 @@ const tasks = {
          title.textContent = tasks.title;
          dateOfTask.textContent = new Date ();
 
-         newsSection.appendChild(taskSection);
-         newsSection.appendChild(title);
-         newsSection.appendChild(dateOfTask);
+         taskSection.appendChild(taskSection);
+         taskSection.appendChild(title);
+         taskSection.appendChild(dateOfTask);
         })
        })
       }
